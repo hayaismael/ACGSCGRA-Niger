@@ -1,0 +1,949 @@
+:root {
+  --walnut-900: #1F2A1A;
+  --walnut-700: #33452B;
+  --oak-500: #2ECC00;
+  --paper-100: #F4F7F1;
+  --sawdust-200: #E2E9DC;
+  --forest-600: #1F6E2E;
+  --ink-900: #14180F;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --wrap-width: 1180px;
+  --radius-s: 4px;
+}
+
+/* =========================
+   BASE
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  overflow-x: hidden;
+
+  font-family: var(--font-body);
+  color: var(--ink-900);
+  background: var(--paper-100);
+  line-height: 1.55;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--forest-600);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.5em;
+
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--walnut-900);
+
+  overflow-wrap: anywhere;
+}
+
+p {
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   ACCESSIBILITÉ
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================
+   CONTENEUR
+========================= */
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap-width);
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* =========================
+   BANNIÈRE
+========================= */
+
+.official-banner {
+  width: 100%;
+
+  aspect-ratio: 1280 / 640;
+
+  background-image: url('5969710744662117907.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: rgba(244, 247, 241, 0.96);
+  backdrop-filter: blur(6px);
+
+  border-bottom: 1px solid var(--sawdust-200);
+}
+
+.header-inner {
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.logo {
+  flex: 0 0 auto;
+
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  color: var(--walnut-900);
+  letter-spacing: 0.02em;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 2rem;
+}
+
+.nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  color: var(--walnut-700);
+}
+
+.nav a:hover {
+  color: var(--walnut-900);
+}
+
+.nav-cta {
+  background: var(--walnut-900);
+  color: #fff !important;
+
+  padding: 0.6em 1.2em;
+
+  border-radius: var(--radius-s);
+}
+
+.nav-cta:hover {
+  background: var(--forest-600);
+}
+
+/* Bouton menu */
+
+.nav-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 8px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+
+  width: 22px;
+  height: 2px;
+
+  background: var(--walnut-900);
+}
+
+/* =========================
+   TEXTES
+========================= */
+
+.eyebrow {
+  margin: 0 0 1em;
+
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--forest-600);
+}
+
+.eyebrow-light {
+  color: var(--oak-500);
+}
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+  max-width: 100%;
+  min-height: 44px;
+
+  padding: 0.9em 1.6em;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-s);
+
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  line-height: 1.25;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--walnut-900);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--forest-600);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   DOCUMENTS
+========================= */
+
+.documents {
+  padding: 72px 0;
+}
+
+.documents h2 {
+  margin-bottom: 2rem;
+
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.doc-cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1.5rem;
+}
+
+.doc-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  gap: 0.9rem;
+
+  padding: 1.75rem;
+
+  background: #fff;
+
+  border: 1px solid var(--sawdust-200);
+  border-radius: 8px;
+}
+
+.doc-card h3 {
+  margin: 0;
+
+  font-size: 1.2rem;
+}
+
+.doc-card p {
+  margin: 0;
+
+  color: var(--walnut-700);
+
+  font-size: 0.92rem;
+}
+
+.doc-card .btn {
+  align-self: flex-start;
+}
+
+/* =========================
+   TEXTE DOCUMENT
+========================= */
+
+.doc-text {
+  width: 100%;
+
+  max-height: 480px;
+
+  margin-top: 0.2rem;
+
+  padding: 1.2rem 1.4rem;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  border: 1px solid var(--sawdust-200);
+  border-radius: var(--radius-s);
+
+  background: var(--paper-100);
+
+  font-size: 0.88rem;
+  line-height: 1.6;
+
+  overflow-wrap: anywhere;
+}
+
+.doc-text-title {
+  margin-bottom: 1rem !important;
+
+  font-weight: 700;
+}
+
+.doc-text h4 {
+  margin: 1.4rem 0 0.6rem;
+
+  color: var(--walnut-900);
+
+  font-size: 1rem;
+}
+
+.doc-text p {
+  margin: 0 0 0.7rem;
+}
+
+.doc-text ul,
+.doc-text ol {
+  margin: 0 0 0.9rem;
+
+  padding-left: 1.3rem;
+}
+
+.doc-text li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   GALERIE
+========================= */
+
+.photo-gallery {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 0.6rem;
+
+  width: 100%;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+
+  border: 1px solid var(--sawdust-200);
+  border-radius: var(--radius-s);
+}
+
+/* =========================
+   ORGANIGRAMME
+========================= */
+
+.organigramme {
+  padding: 88px 0;
+
+  background: var(--walnut-900);
+
+  color: var(--paper-100);
+}
+
+.organigramme h2 {
+  margin-bottom: 3rem;
+
+  color: var(--paper-100);
+
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.org-chart {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.org-row {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.org-box {
+  width: min(180px, 100%);
+
+  min-width: 0;
+  max-width: 100%;
+
+  padding: 1rem 1.4rem;
+
+  border: 1px solid var(--oak-500);
+  border-radius: var(--radius-s);
+
+  background: var(--paper-100);
+
+  color: var(--walnut-900);
+
+  font-size: 0.92rem;
+  font-weight: 600;
+
+  line-height: 1.35;
+  text-align: center;
+
+  overflow-wrap: anywhere;
+}
+
+.org-box-top {
+  background: var(--oak-500);
+
+  border-color: var(--oak-500);
+
+  color: #fff;
+}
+
+.org-box-side {
+  background: transparent;
+
+  color: var(--paper-100);
+
+  border-color: rgba(244, 247, 241, 0.4);
+}
+
+.org-box-small {
+  width: min(150px, 100%);
+
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.org-connector {
+  width: 1px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  background: var(--oak-500);
+}
+
+/* Branche principale */
+
+.org-branch-3 {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2.5rem;
+
+  padding-top: 32px;
+
+  margin-top: -32px;
+}
+
+.org-branch-3::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: calc(100% - 200px);
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: rgba(244, 247, 241, 0.4);
+}
+
+.org-branch-3 .org-box {
+  position: relative;
+}
+
+.org-branch-3 .org-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: -32px;
+  left: 50%;
+
+  width: 1px;
+  height: 32px;
+
+  background: rgba(244, 247, 241, 0.4);
+}
+
+/* Services */
+
+.org-services {
+  position: relative;
+
+  width: 100%;
+  max-width: 980px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1.5rem 1rem;
+
+  padding-top: 32px;
+}
+
+.org-services::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  background: var(--oak-500);
+}
+
+.org-services .org-box {
+  position: relative;
+}
+
+.org-services .org-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: -32px;
+  left: 50%;
+
+  width: 1px;
+  height: 32px;
+
+  background: var(--oak-500);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  padding: 88px 0;
+}
+
+.contact h2 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.contact-meta {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1.2rem;
+
+  margin-top: 2rem;
+}
+
+.contact-meta div {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3rem;
+}
+
+.contact-meta dt {
+  font-family: var(--font-mono);
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: var(--forest-600);
+}
+
+.contact-meta dd {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  padding: 24px 0;
+
+  background: var(--walnut-900);
+
+  color: rgba(244, 247, 241, 0.7);
+
+  font-size: 0.85rem;
+}
+
+.footer-inner {
+  display: flex;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 900px) {
+
+  .doc-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .org-branch-3 {
+    flex-direction: column;
+
+    gap: 1.2rem;
+
+    padding-top: 0;
+
+    margin-top: 0;
+  }
+
+  .org-branch-3::before,
+  .org-branch-3 .org-box::before,
+  .org-services::before,
+  .org-services .org-box::before {
+    display: none;
+  }
+
+  .org-services {
+    padding-top: 0;
+
+    gap: 1rem;
+  }
+
+  .org-services .org-box {
+    width: min(220px, 100%);
+  }
+}
+
+/* =========================
+   TÉLÉPHONE
+========================= */
+
+@media (max-width: 760px) {
+
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Header */
+
+  .header-inner {
+    min-height: 68px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+
+    top: 68px;
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0.4rem;
+
+    padding: 1rem 20px 1.25rem;
+
+    background: var(--paper-100);
+
+    border-bottom: 1px solid var(--sawdust-200);
+
+    box-shadow: 0 8px 20px rgba(20, 24, 15, 0.08);
+  }
+
+  .nav.nav-open {
+    display: flex;
+  }
+
+  .nav a {
+    display: block;
+
+    width: 100%;
+
+    padding: 0.8rem 0;
+  }
+
+  .nav-cta {
+    width: 100%;
+
+    padding: 0.8rem 1rem !important;
+
+    text-align: center;
+  }
+
+  /* Sections */
+
+  .documents {
+    padding: 52px 0;
+  }
+
+  .organigramme {
+    padding: 56px 0;
+  }
+
+  .contact {
+    padding: 52px 0;
+  }
+
+  .documents h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .organigramme h2 {
+    margin-bottom: 2rem;
+  }
+
+  /* Contact */
+
+  .contact-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   PETITS TÉLÉPHONES
+========================= */
+
+@media (max-width: 480px) {
+
+  .wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Bannière */
+
+  .official-banner {
+    aspect-ratio: 4 / 3;
+
+    background-position: center center;
+  }
+
+  /* Documents */
+
+  .doc-card {
+    padding: 1rem;
+
+    gap: 0.75rem;
+  }
+
+  .doc-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .doc-card p {
+    font-size: 0.86rem;
+  }
+
+  .doc-card .btn {
+    width: 100%;
+
+    align-self: stretch;
+
+    padding: 0.85rem 1rem;
+
+    font-size: 0.88rem;
+  }
+
+  /* Texte document */
+
+  .doc-text {
+    max-height: 340px;
+
+    padding: 0.9rem;
+
+    font-size: 0.84rem;
+  }
+
+  .doc-text h4 {
+    font-size: 0.95rem;
+  }
+
+  /* Galerie */
+
+  .photo-gallery {
+    gap: 0.5rem;
+  }
+
+  /* Organigramme */
+
+  .org-box {
+    width: min(300px, 92%);
+
+    padding: 0.8rem 0.9rem;
+
+    font-size: 0.82rem;
+  }
+
+  .org-box-small {
+    width: min(300px, 92%);
+
+    font-size: 0.78rem;
+  }
+
+  .org-connector {
+    height: 24px;
+
+    flex-basis: 24px;
+  }
+
+  /* Contact */
+
+  .contact {
+    padding: 48px 0;
+  }
+
+  /* Footer */
+
+  .site-footer {
+    padding: 20px 0;
+
+    font-size: 0.78rem;
+  }
+}
+
+/* =========================
+   TRÈS PETITS TÉLÉPHONES
+========================= */
+
+@media (max-width: 360px) {
+
+  .wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .org-box {
+    width: 94%;
+  }
+}
