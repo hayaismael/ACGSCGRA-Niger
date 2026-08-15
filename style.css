@@ -15,9 +15,10 @@
   --radius-s: 4px;
 }
 
-/* =========================
-   BASE
-========================= */
+
+/* =========================================
+   RESET / BASE
+========================================= */
 
 *,
 *::before,
@@ -30,14 +31,20 @@ html {
   overflow-x: hidden;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
-  min-width: 0;
-  overflow-x: hidden;
 
   font-family: var(--font-body);
   color: var(--ink-900);
   background: var(--paper-100);
+
   line-height: 1.55;
 
   -webkit-font-smoothing: antialiased;
@@ -54,6 +61,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font-family: inherit;
+}
+
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--forest-600);
@@ -68,6 +79,7 @@ h3 {
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.15;
+
   color: var(--walnut-900);
 
   overflow-wrap: anywhere;
@@ -77,9 +89,10 @@ p {
   overflow-wrap: anywhere;
 }
 
-/* =========================
+
+/* =========================================
    ACCESSIBILITÉ
-========================= */
+========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -96,43 +109,54 @@ p {
   }
 }
 
-/* =========================
+
+/* =========================================
    CONTENEUR
-========================= */
+========================================= */
 
 .wrap {
   width: 100%;
   max-width: var(--wrap-width);
+
   margin: 0 auto;
+
   padding-left: 32px;
   padding-right: 32px;
 }
 
-/* =========================
+
+/* =========================================
    BANNIÈRE
-========================= */
+   Image : 1280 x 640
+   Ratio : 2 / 1
+========================================= */
 
 .official-banner {
   width: 100%;
 
-  aspect-ratio: 1280 / 640;
+  aspect-ratio: 2 / 1;
 
   background-image: url('5969710744662117907.jpg');
+
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
-/* =========================
+
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
 
+  width: 100%;
+
   background: rgba(244, 247, 241, 0.96);
+
   backdrop-filter: blur(6px);
 
   border-bottom: 1px solid var(--sawdust-200);
@@ -152,19 +176,23 @@ p {
   flex: 0 0 auto;
 
   font-family: var(--font-display);
+
   font-size: 1.25rem;
   font-weight: 600;
 
   color: var(--walnut-900);
+
   letter-spacing: 0.02em;
 }
 
-/* =========================
+
+/* =========================================
    NAVIGATION
-========================= */
+========================================= */
 
 .nav {
   display: flex;
+
   align-items: center;
   justify-content: flex-end;
 
@@ -184,6 +212,7 @@ p {
 
 .nav-cta {
   background: var(--walnut-900);
+
   color: #fff !important;
 
   padding: 0.6em 1.2em;
@@ -195,7 +224,10 @@ p {
   background: var(--forest-600);
 }
 
-/* Bouton menu */
+
+/* =========================================
+   BOUTON MENU MOBILE
+========================================= */
 
 .nav-toggle {
   display: none;
@@ -212,6 +244,7 @@ p {
   padding: 8px;
 
   background: transparent;
+
   border: none;
 
   cursor: pointer;
@@ -226,17 +259,20 @@ p {
   background: var(--walnut-900);
 }
 
-/* =========================
+
+/* =========================================
    TEXTES
-========================= */
+========================================= */
 
 .eyebrow {
   margin: 0 0 1em;
 
   font-family: var(--font-mono);
+
   font-size: 0.78rem;
 
   letter-spacing: 0.12em;
+
   text-transform: uppercase;
 
   color: var(--forest-600);
@@ -246,9 +282,10 @@ p {
   color: var(--oak-500);
 }
 
-/* =========================
+
+/* =========================================
    BOUTONS
-========================= */
+========================================= */
 
 .btn {
   display: inline-flex;
@@ -258,18 +295,22 @@ p {
 
   width: auto;
   max-width: 100%;
+
   min-height: 44px;
 
   padding: 0.9em 1.6em;
 
   border: 1px solid transparent;
+
   border-radius: var(--radius-s);
 
   font-family: var(--font-body);
+
   font-size: 0.95rem;
   font-weight: 600;
 
   line-height: 1.25;
+
   text-align: center;
 
   cursor: pointer;
@@ -281,17 +322,20 @@ p {
 
 .btn-primary {
   background: var(--walnut-900);
+
   color: #fff;
 }
 
 .btn-primary:hover {
   background: var(--forest-600);
+
   transform: translateY(-1px);
 }
 
-/* =========================
+
+/* =========================================
    DOCUMENTS
-========================= */
+========================================= */
 
 .documents {
   padding: 72px 0;
@@ -306,7 +350,7 @@ p {
 .doc-cards {
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   gap: 1.5rem;
 }
@@ -325,6 +369,7 @@ p {
   background: #fff;
 
   border: 1px solid var(--sawdust-200);
+
   border-radius: 8px;
 }
 
@@ -346,16 +391,34 @@ p {
   align-self: flex-start;
 }
 
-/* =========================
+
+/* =========================================
+   DOCUMENT VIEWER
+========================================= */
+
+.doc-viewer {
+  width: 100%;
+
+  height: 480px;
+
+  margin-top: 0.5rem;
+
+  border: 1px solid var(--sawdust-200);
+
+  border-radius: var(--radius-s);
+}
+
+
+/* =========================================
    TEXTE DOCUMENT
-========================= */
+========================================= */
 
 .doc-text {
   width: 100%;
 
   max-height: 480px;
 
-  margin-top: 0.2rem;
+  margin-top: 0.8rem;
 
   padding: 1.2rem 1.4rem;
 
@@ -363,14 +426,18 @@ p {
   overflow-y: auto;
 
   border: 1px solid var(--sawdust-200);
+
   border-radius: var(--radius-s);
 
   background: var(--paper-100);
 
   font-size: 0.88rem;
+
   line-height: 1.6;
 
   overflow-wrap: anywhere;
+
+  word-break: break-word;
 }
 
 .doc-text-title {
@@ -402,18 +469,21 @@ p {
   margin-bottom: 0.5rem;
 }
 
-/* =========================
+
+/* =========================================
    GALERIE
-========================= */
+========================================= */
 
 .photo-gallery {
+  width: 100%;
+
+  margin-top: 0.5rem;
+
   display: grid;
 
   grid-template-columns: 1fr;
 
   gap: 0.6rem;
-
-  width: 100%;
 }
 
 .photo-gallery img {
@@ -421,15 +491,19 @@ p {
   height: auto;
 
   border: 1px solid var(--sawdust-200);
+
   border-radius: var(--radius-s);
 }
 
-/* =========================
-   ORGANIGRAMME
-========================= */
+
+/* =========================================
+   ORGANIGRAMME - DESKTOP
+========================================= */
 
 .organigramme {
-  padding: 88px 0;
+  width: 100%;
+
+  padding: 70px 0;
 
   background: var(--walnut-900);
 
@@ -437,12 +511,15 @@ p {
 }
 
 .organigramme h2 {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 
   color: var(--paper-100);
 
   font-size: clamp(1.6rem, 3vw, 2.2rem);
 }
+
+
+/* Organigramme général */
 
 .org-chart {
   width: 100%;
@@ -452,36 +529,51 @@ p {
   align-items: center;
 }
 
+
+/* Ligne */
+
 .org-row {
   width: 100%;
 
   display: flex;
+
   justify-content: center;
 }
 
+
+/* Boîtes */
+
 .org-box {
-  width: min(180px, 100%);
+  width: 180px;
 
-  min-width: 0;
-  max-width: 100%;
+  min-width: 180px;
+  max-width: 180px;
 
-  padding: 1rem 1.4rem;
-
-  border: 1px solid var(--oak-500);
-  border-radius: var(--radius-s);
+  padding: 0.85rem 0.9rem;
 
   background: var(--paper-100);
 
   color: var(--walnut-900);
 
-  font-size: 0.92rem;
+  border: 1px solid var(--oak-500);
+
+  border-radius: var(--radius-s);
+
+  font-size: 0.84rem;
+
   font-weight: 600;
 
-  line-height: 1.35;
+  line-height: 1.3;
+
   text-align: center;
 
   overflow-wrap: anywhere;
+
+  word-break: break-word;
 }
+
+
+/* Boîte principale */
 
 .org-box-top {
   background: var(--oak-500);
@@ -491,6 +583,9 @@ p {
   color: #fff;
 }
 
+
+/* Boîte secondaire */
+
 .org-box-side {
   background: transparent;
 
@@ -499,23 +594,37 @@ p {
   border-color: rgba(244, 247, 241, 0.4);
 }
 
-.org-box-small {
-  width: min(150px, 100%);
 
-  font-size: 0.85rem;
+/* Petites boîtes */
+
+.org-box-small {
+  width: 150px;
+
+  min-width: 150px;
+  max-width: 150px;
+
+  font-size: 0.76rem;
+
   font-weight: 500;
 }
 
+
+/* Connecteurs */
+
 .org-connector {
   width: 1px;
-  height: 32px;
 
-  flex: 0 0 32px;
+  height: 24px;
+
+  flex: 0 0 24px;
 
   background: var(--oak-500);
 }
 
-/* Branche principale */
+
+/* =========================================
+   BRANCHE 3 COLONNES
+========================================= */
 
 .org-branch-3 {
   position: relative;
@@ -523,15 +632,20 @@ p {
   width: 100%;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
-  gap: 2.5rem;
+  gap: 1.8rem;
 
-  padding-top: 32px;
+  padding-top: 24px;
 
-  margin-top: -32px;
+  margin-top: -24px;
 }
+
+
+/* Ligne horizontale */
 
 .org-branch-3::before {
   content: "";
@@ -539,15 +653,20 @@ p {
   position: absolute;
 
   top: 0;
+
   left: 50%;
 
   width: calc(100% - 200px);
+
   height: 1px;
 
   transform: translateX(-50%);
 
   background: rgba(244, 247, 241, 0.4);
 }
+
+
+/* Connecteurs verticaux */
 
 .org-branch-3 .org-box {
   position: relative;
@@ -558,31 +677,42 @@ p {
 
   position: absolute;
 
-  top: -32px;
+  top: -24px;
+
   left: 50%;
 
   width: 1px;
-  height: 32px;
+
+  height: 24px;
 
   background: rgba(244, 247, 241, 0.4);
 }
 
-/* Services */
+
+/* =========================================
+   SERVICES
+========================================= */
 
 .org-services {
   position: relative;
 
   width: 100%;
-  max-width: 980px;
+
+  max-width: 950px;
 
   display: flex;
+
   flex-wrap: wrap;
+
   justify-content: center;
 
-  gap: 1.5rem 1rem;
+  gap: 1rem;
 
-  padding-top: 32px;
+  padding-top: 24px;
 }
+
+
+/* Ligne des services */
 
 .org-services::before {
   content: "";
@@ -590,13 +720,18 @@ p {
   position: absolute;
 
   top: 0;
+
   left: 8%;
+
   right: 8%;
 
   height: 1px;
 
   background: var(--oak-500);
 }
+
+
+/* Connecteurs services */
 
 .org-services .org-box {
   position: relative;
@@ -607,21 +742,24 @@ p {
 
   position: absolute;
 
-  top: -32px;
+  top: -24px;
+
   left: 50%;
 
   width: 1px;
-  height: 32px;
+
+  height: 24px;
 
   background: var(--oak-500);
 }
 
-/* =========================
+
+/* =========================================
    CONTACT
-========================= */
+========================================= */
 
 .contact {
-  padding: 88px 0;
+  padding: 80px 0;
 }
 
 .contact h2 {
@@ -642,6 +780,7 @@ p {
   min-width: 0;
 
   display: flex;
+
   flex-direction: column;
 
   gap: 0.3rem;
@@ -652,9 +791,9 @@ p {
 
   font-size: 0.75rem;
 
-  letter-spacing: 0.08em;
-
   text-transform: uppercase;
+
+  letter-spacing: 0.08em;
 
   color: var(--forest-600);
 }
@@ -663,14 +802,18 @@ p {
   margin: 0;
 
   font-size: 1rem;
+
   font-weight: 500;
 
   overflow-wrap: anywhere;
+
+  word-break: break-word;
 }
 
-/* =========================
+
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 .site-footer {
   padding: 24px 0;
@@ -690,20 +833,30 @@ p {
   text-align: center;
 }
 
-/* =========================
-   TABLETTE
-========================= */
+
+/* =========================================
+   TABLETTE - 900px
+========================================= */
 
 @media (max-width: 900px) {
 
+  /* Documents */
+
   .doc-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  /* Organigramme */
+
+  .organigramme {
+    padding: 55px 0;
   }
 
   .org-branch-3 {
     flex-direction: column;
 
-    gap: 1.2rem;
+    gap: 0.6rem;
 
     padding-top: 0;
 
@@ -718,26 +871,39 @@ p {
   }
 
   .org-services {
-    padding-top: 0;
+    flex-direction: column;
 
-    gap: 1rem;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    padding-top: 0;
   }
 
   .org-services .org-box {
-    width: min(220px, 100%);
+    width: 180px;
+
+    min-width: 180px;
+
+    max-width: 180px;
   }
 }
 
-/* =========================
-   TÉLÉPHONE
-========================= */
+
+/* =========================================
+   MOBILE - 760px
+========================================= */
 
 @media (max-width: 760px) {
 
+  /* Conteneur */
+
   .wrap {
     padding-left: 20px;
+
     padding-right: 20px;
   }
+
 
   /* Header */
 
@@ -749,15 +915,23 @@ p {
     font-size: 1.1rem;
   }
 
+
+  /* Bouton menu */
+
   .nav-toggle {
     display: flex;
   }
+
+
+  /* Navigation mobile */
 
   .nav {
     position: absolute;
 
     top: 68px;
+
     left: 0;
+
     right: 0;
 
     display: none;
@@ -766,9 +940,9 @@ p {
 
     align-items: stretch;
 
-    gap: 0.4rem;
+    gap: 0.3rem;
 
-    padding: 1rem 20px 1.25rem;
+    padding: 0.8rem 20px 1rem;
 
     background: var(--paper-100);
 
@@ -786,16 +960,17 @@ p {
 
     width: 100%;
 
-    padding: 0.8rem 0;
+    padding: 0.7rem 0;
   }
 
   .nav-cta {
     width: 100%;
 
-    padding: 0.8rem 1rem !important;
+    padding: 0.75rem 1rem !important;
 
     text-align: center;
   }
+
 
   /* Sections */
 
@@ -804,20 +979,20 @@ p {
   }
 
   .organigramme {
-    padding: 56px 0;
+    padding: 50px 0;
   }
 
   .contact {
     padding: 52px 0;
   }
 
-  .documents h2 {
-    margin-bottom: 1.5rem;
+
+  /* Documents */
+
+  .doc-cards {
+    grid-template-columns: 1fr;
   }
 
-  .organigramme h2 {
-    margin-bottom: 2rem;
-  }
 
   /* Contact */
 
@@ -826,31 +1001,56 @@ p {
   }
 }
 
-/* =========================
-   PETITS TÉLÉPHONES
-========================= */
+
+/* =========================================
+   MOBILE - 480px
+========================================= */
 
 @media (max-width: 480px) {
 
+  /* Conteneur */
+
   .wrap {
     padding-left: 16px;
+
     padding-right: 16px;
   }
 
-  /* Bannière */
+
+  /* =======================================
+     BANNIÈRE
+     On garde le ratio 2/1
+  ======================================= */
 
   .official-banner {
-    aspect-ratio: 4 / 3;
+    width: 100%;
+
+    aspect-ratio: 2 / 1;
+
+    background-size: cover;
 
     background-position: center center;
   }
 
-  /* Documents */
+
+  /* =======================================
+     DOCUMENTS
+  ======================================= */
+
+  .documents {
+    padding: 42px 0;
+  }
+
+  .documents h2 {
+    margin-bottom: 1.4rem;
+
+    font-size: 1.5rem;
+  }
 
   .doc-card {
     padding: 1rem;
 
-    gap: 0.75rem;
+    gap: 0.7rem;
   }
 
   .doc-card h3 {
@@ -858,68 +1058,155 @@ p {
   }
 
   .doc-card p {
-    font-size: 0.86rem;
+    font-size: 0.84rem;
   }
+
+
+  /* Boutons */
 
   .doc-card .btn {
     width: 100%;
 
     align-self: stretch;
 
-    padding: 0.85rem 1rem;
+    padding: 0.8rem 1rem;
 
-    font-size: 0.88rem;
+    font-size: 0.86rem;
   }
+
 
   /* Texte document */
 
   .doc-text {
-    max-height: 340px;
+    max-height: 320px;
 
-    padding: 0.9rem;
-
-    font-size: 0.84rem;
-  }
-
-  .doc-text h4 {
-    font-size: 0.95rem;
-  }
-
-  /* Galerie */
-
-  .photo-gallery {
-    gap: 0.5rem;
-  }
-
-  /* Organigramme */
-
-  .org-box {
-    width: min(300px, 92%);
-
-    padding: 0.8rem 0.9rem;
+    padding: 0.85rem;
 
     font-size: 0.82rem;
   }
 
-  .org-box-small {
-    width: min(300px, 92%);
-
-    font-size: 0.78rem;
+  .doc-text h4 {
+    font-size: 0.92rem;
   }
+
+
+  /* Viewer */
+
+  .doc-viewer {
+    height: 300px;
+  }
+
+
+  /* =======================================
+     ORGANIGRAMME MOBILE
+  ======================================= */
+
+  .organigramme {
+    padding: 38px 0;
+  }
+
+  .organigramme h2 {
+    margin-bottom: 1.4rem;
+
+    font-size: 1.4rem;
+
+    text-align: center;
+  }
+
+
+  /* Toutes les boîtes sont petites */
+
+  .org-box {
+    width: 230px;
+
+    min-width: 230px;
+
+    max-width: 230px;
+
+    padding: 0.6rem 0.7rem;
+
+    font-size: 0.76rem;
+
+    line-height: 1.25;
+  }
+
+
+  /* Petites boîtes */
+
+  .org-box-small {
+    width: 210px;
+
+    min-width: 210px;
+
+    max-width: 210px;
+
+    font-size: 0.71rem;
+  }
+
+
+  /* Connecteurs très courts */
 
   .org-connector {
-    height: 24px;
+    height: 15px;
 
-    flex-basis: 24px;
+    flex-basis: 15px;
   }
 
-  /* Contact */
+
+  /* Branche verticale */
+
+  .org-branch-3 {
+    width: 100%;
+
+    gap: 0.5rem;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+
+  /* Services */
+
+  .org-services {
+    width: 100%;
+
+    gap: 0.5rem;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .org-services .org-box {
+    width: 210px;
+
+    min-width: 210px;
+
+    max-width: 210px;
+  }
+
+
+  /* =======================================
+     CONTACT
+  ======================================= */
 
   .contact {
-    padding: 48px 0;
+    padding: 44px 0;
   }
 
-  /* Footer */
+  .contact-meta {
+    gap: 1rem;
+  }
+
+  .contact-meta dd {
+    font-size: 0.9rem;
+  }
+
+
+  /* =======================================
+     FOOTER
+  ======================================= */
 
   .site-footer {
     padding: 20px 0;
@@ -928,22 +1215,90 @@ p {
   }
 }
 
-/* =========================
-   TRÈS PETITS TÉLÉPHONES
-========================= */
+
+/* =========================================
+   TRÈS PETIT TÉLÉPHONE - 360px
+========================================= */
 
 @media (max-width: 360px) {
 
   .wrap {
     padding-left: 12px;
+
     padding-right: 12px;
   }
+
+
+  /* Logo */
 
   .logo {
     font-size: 1rem;
   }
 
+
+  /* Bannière */
+
+  .official-banner {
+    aspect-ratio: 2 / 1;
+
+    background-size: cover;
+
+    background-position: center center;
+  }
+
+
+  /* Documents */
+
+  .doc-card {
+    padding: 0.85rem;
+  }
+
+
+  /* Organigramme */
+
+  .organigramme {
+    padding: 32px 0;
+  }
+
+  .organigramme h2 {
+    font-size: 1.25rem;
+
+    padding: 0 10px;
+  }
+
   .org-box {
-    width: 94%;
+    width: 205px;
+
+    min-width: 205px;
+
+    max-width: 205px;
+
+    padding: 0.55rem;
+
+    font-size: 0.72rem;
+  }
+
+  .org-box-small {
+    width: 190px;
+
+    min-width: 190px;
+
+    max-width: 190px;
+
+    font-size: 0.68rem;
+  }
+
+  .org-services .org-box {
+    width: 195px;
+
+    min-width: 195px;
+
+    max-width: 195px;
+  }
+
+  .org-connector {
+    height: 13px;
+
+    flex-basis: 13px;
   }
 }
