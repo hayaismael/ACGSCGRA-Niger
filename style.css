@@ -1302,3 +1302,236 @@ p {
     flex-basis: 13px;
   }
 }
+/* =====================================================
+   CORRECTION MOBILE - IMAGE + ORGANIGRAMME
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  /* =========================
+     IMAGE / BANNIÈRE
+     ========================= */
+
+  .official-banner {
+    width: 100%;
+    height: auto;
+
+    /* hauteur beaucoup plus petite */
+    aspect-ratio: 16 / 6;
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+  }
+
+
+  /* =========================
+     ORGANIGRAMME
+     ========================= */
+
+  .organigramme {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 30px 10px;
+
+    overflow: hidden;
+  }
+
+  .organigramme .wrap {
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+
+  /* Titre */
+
+  .organigramme h2 {
+    font-size: 1.2rem;
+
+    margin-bottom: 1.2rem;
+
+    text-align: center;
+  }
+
+
+  /* Conteneur */
+
+  .org-chart {
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+  }
+
+
+  /* Toutes les boîtes */
+
+  .org-box {
+    width: 175px !important;
+    min-width: 175px !important;
+    max-width: 175px !important;
+
+    padding: 7px 8px;
+
+    font-size: 0.68rem;
+
+    line-height: 1.2;
+
+    border-radius: 3px;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+
+  /* Petites boîtes */
+
+  .org-box-small {
+    width: 160px !important;
+    min-width: 160px !important;
+    max-width: 160px !important;
+
+    padding: 6px 7px;
+
+    font-size: 0.64rem;
+  }
+
+
+  /* Boîte principale */
+
+  .org-box-top {
+    width: 175px !important;
+    min-width: 175px !important;
+    max-width: 175px !important;
+  }
+
+
+  /* Branche */
+
+  .org-branch-3 {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 0;
+
+    margin: 0;
+  }
+
+  .org-branch-3::before {
+    display: none;
+  }
+
+  .org-branch-3 .org-box::before {
+    display: none;
+  }
+
+
+  /* Services */
+
+  .org-services {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 0;
+
+    margin: 0;
+  }
+
+  .org-services::before {
+    display: none;
+  }
+
+  .org-services .org-box {
+    width: 160px !important;
+    min-width: 160px !important;
+    max-width: 160px !important;
+  }
+
+  .org-services .org-box::before {
+    display: none;
+  }
+
+
+  /* Connecteurs */
+
+  .org-connector {
+    width: 1px;
+
+    height: 10px;
+
+    min-height: 10px;
+  }
+}
+
+
+/* =====================================================
+   TRÈS PETIT TÉLÉPHONE
+   ===================================================== */
+
+@media (max-width: 360px) {
+
+  .official-banner {
+    aspect-ratio: 16 / 5;
+  }
+
+
+  .organigramme {
+    padding: 25px 5px;
+  }
+
+
+  .organigramme h2 {
+    font-size: 1.1rem;
+  }
+
+
+  .org-box {
+    width: 155px !important;
+    min-width: 155px !important;
+    max-width: 155px !important;
+
+    padding: 6px;
+
+    font-size: 0.62rem;
+  }
+
+
+  .org-box-small {
+    width: 145px !important;
+    min-width: 145px !important;
+    max-width: 145px !important;
+
+    font-size: 0.58rem;
+  }
+
+
+  .org-services .org-box {
+    width: 145px !important;
+    min-width: 145px !important;
+    max-width: 145px !important;
+  }
+}
