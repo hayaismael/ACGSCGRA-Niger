@@ -16,9 +16,9 @@
 }
 
 
-/* =====================================================
+/* ================================
    RESET
-===================================================== */
+================================ */
 
 *,
 *::before,
@@ -84,9 +84,9 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    ACCESSIBILITÉ
-===================================================== */
+================================ */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -103,43 +103,39 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    CONTENEUR
-===================================================== */
+================================ */
 
 .wrap {
   width: 100%;
   max-width: var(--wrap-width);
-
   margin: 0 auto;
-
   padding-left: 32px;
   padding-right: 32px;
 }
 
 
-/* =====================================================
-   BANNIÈRE / IMAGE
-===================================================== */
+/* ================================
+   IMAGE / BANNIÈRE
+================================ */
 
 .official-banner {
   width: 100%;
-
   aspect-ratio: 2 / 1;
 
   background-image: url('5969710744662117907.jpg');
-
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 
   overflow: hidden;
 }
 
 
-/* =====================================================
+/* ================================
    HEADER
-===================================================== */
+================================ */
 
 .site-header {
   position: sticky;
@@ -149,7 +145,6 @@ p {
   width: 100%;
 
   background: rgba(244, 247, 241, 0.96);
-
   backdrop-filter: blur(6px);
 
   border-bottom: 1px solid var(--sawdust-200);
@@ -169,7 +164,6 @@ p {
   flex: 0 0 auto;
 
   font-family: var(--font-display);
-
   font-size: 1.25rem;
   font-weight: 600;
 
@@ -179,13 +173,12 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    NAVIGATION
-===================================================== */
+================================ */
 
 .nav {
   display: flex;
-
   align-items: center;
   justify-content: flex-end;
 
@@ -195,7 +188,6 @@ p {
 .nav a {
   font-size: 0.95rem;
   font-weight: 500;
-
   color: var(--walnut-700);
 }
 
@@ -205,11 +197,9 @@ p {
 
 .nav-cta {
   background: var(--walnut-900);
-
   color: #fff !important;
 
   padding: 0.6em 1.2em;
-
   border-radius: var(--radius-s);
 }
 
@@ -218,9 +208,9 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    MENU MOBILE
-===================================================== */
+================================ */
 
 .nav-toggle {
   display: none;
@@ -237,7 +227,6 @@ p {
   padding: 8px;
 
   background: transparent;
-
   border: none;
 
   cursor: pointer;
@@ -253,19 +242,17 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    TEXTES
-===================================================== */
+================================ */
 
 .eyebrow {
   margin: 0 0 1em;
 
   font-family: var(--font-mono);
-
   font-size: 0.78rem;
 
   letter-spacing: 0.12em;
-
   text-transform: uppercase;
 
   color: var(--forest-600);
@@ -276,9 +263,9 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    BOUTONS
-===================================================== */
+================================ */
 
 .btn {
   display: inline-flex;
@@ -288,22 +275,18 @@ p {
 
   width: auto;
   max-width: 100%;
-
   min-height: 44px;
 
   padding: 0.9em 1.6em;
 
   border: 1px solid transparent;
-
   border-radius: var(--radius-s);
 
   font-family: var(--font-body);
-
   font-size: 0.95rem;
   font-weight: 600;
 
   line-height: 1.25;
-
   text-align: center;
 
   cursor: pointer;
@@ -324,9 +307,9 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    DOCUMENTS
-===================================================== */
+================================ */
 
 .documents {
   padding: 72px 0;
@@ -334,15 +317,12 @@ p {
 
 .documents h2 {
   margin-bottom: 2rem;
-
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .doc-cards {
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
   gap: 1.5rem;
 }
 
@@ -360,7 +340,6 @@ p {
   background: #fff;
 
   border: 1px solid var(--sawdust-200);
-
   border-radius: 8px;
 }
 
@@ -373,7 +352,6 @@ p {
   margin: 0;
 
   color: var(--walnut-700);
-
   font-size: 0.92rem;
 }
 
@@ -382,26 +360,24 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    DOCUMENT VIEWER
-===================================================== */
+================================ */
 
 .doc-viewer {
   width: 100%;
-
   height: 480px;
 
   margin-top: 0.5rem;
 
   border: 1px solid var(--sawdust-200);
-
   border-radius: var(--radius-s);
 }
 
 
-/* =====================================================
-   TEXTE DES DOCUMENTS
-===================================================== */
+/* ================================
+   TEXTE DOCUMENT
+================================ */
 
 .doc-text {
   width: 100%;
@@ -409,30 +385,25 @@ p {
   max-height: 480px;
 
   margin-top: 0.8rem;
-
   padding: 1.2rem 1.4rem;
 
   overflow-x: hidden;
   overflow-y: auto;
 
   border: 1px solid var(--sawdust-200);
-
   border-radius: var(--radius-s);
 
   background: var(--paper-100);
 
   font-size: 0.88rem;
-
   line-height: 1.6;
 
   overflow-wrap: anywhere;
-
   word-break: break-word;
 }
 
 .doc-text-title {
   margin-bottom: 1rem !important;
-
   font-weight: 700;
 }
 
@@ -440,7 +411,6 @@ p {
   margin: 1.4rem 0 0.6rem;
 
   color: var(--walnut-900);
-
   font-size: 1rem;
 }
 
@@ -451,7 +421,6 @@ p {
 .doc-text ul,
 .doc-text ol {
   margin: 0 0 0.9rem;
-
   padding-left: 1.3rem;
 }
 
@@ -460,9 +429,9 @@ p {
 }
 
 
-/* =====================================================
+/* ================================
    GALERIE
-===================================================== */
+================================ */
 
 .photo-gallery {
   width: 100%;
@@ -470,7 +439,6 @@ p {
   margin-top: 0.5rem;
 
   display: grid;
-
   grid-template-columns: 1fr;
 
   gap: 0.6rem;
@@ -481,14 +449,13 @@ p {
   height: auto;
 
   border: 1px solid var(--sawdust-200);
-
   border-radius: var(--radius-s);
 }
 
 
-/* =====================================================
+/* ================================
    ORGANIGRAMME
-===================================================== */
+================================ */
 
 .organigramme {
   width: 100%;
@@ -496,7 +463,6 @@ p {
   padding: 70px 0;
 
   background: var(--walnut-900);
-
   color: var(--paper-100);
 }
 
@@ -508,9 +474,6 @@ p {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
 }
 
-
-/* Conteneur principal */
-
 .org-chart {
   width: 100%;
 
@@ -519,100 +482,79 @@ p {
   align-items: center;
 }
 
-
-/* Ligne */
-
 .org-row {
   width: 100%;
 
   display: flex;
-
   justify-content: center;
 }
 
 
-/* Boîtes */
+/* ================================
+   CASES ORGANIGRAMME
+================================ */
 
 .org-box {
   width: 180px;
-
   min-width: 180px;
   max-width: 180px;
 
   padding: 0.85rem 0.9rem;
 
   background: var(--paper-100);
-
   color: var(--walnut-900);
 
   border: 1px solid var(--oak-500);
-
   border-radius: var(--radius-s);
 
   font-size: 0.84rem;
-
   font-weight: 600;
 
   line-height: 1.3;
-
   text-align: center;
 
   overflow-wrap: anywhere;
-
   word-break: break-word;
 }
 
-
-/* Boîte principale */
-
 .org-box-top {
   background: var(--oak-500);
-
   border-color: var(--oak-500);
-
   color: #fff;
 }
 
-
-/* Boîte secondaire */
-
 .org-box-side {
   background: transparent;
-
   color: var(--paper-100);
 
   border-color: rgba(244, 247, 241, 0.4);
 }
 
-
-/* Petites boîtes */
-
 .org-box-small {
   width: 150px;
-
   min-width: 150px;
   max-width: 150px;
 
   font-size: 0.76rem;
-
   font-weight: 500;
 }
 
 
-/* Connecteur */
+/* ================================
+   CONNECTEUR
+================================ */
 
 .org-connector {
   width: 1px;
-
   height: 24px;
 
   background: var(--oak-500);
 }
 
 
-/* =====================================================
-   BRANCHE 3 SERVICES
-===================================================== */
+/* ================================
+   BRANCHE PRINCIPALE
+================================ */
 
 .org-branch-3 {
   position: relative;
@@ -622,7 +564,6 @@ p {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 1.8rem;
@@ -638,11 +579,9 @@ p {
   position: absolute;
 
   top: 0;
-
   left: 50%;
 
   width: calc(100% - 200px);
-
   height: 1px;
 
   transform: translateX(-50%);
@@ -660,26 +599,23 @@ p {
   position: absolute;
 
   top: -24px;
-
   left: 50%;
 
   width: 1px;
-
   height: 24px;
 
   background: rgba(244, 247, 241, 0.4);
 }
 
 
-/* =====================================================
-   SERVICES INFORMATIQUE / COMPTABILITÉ
-===================================================== */
+/* ================================
+   SERVICES
+================================ */
 
 .org-services {
   position: relative;
 
   width: 100%;
-
   max-width: 950px;
 
   display: flex;
@@ -687,7 +623,6 @@ p {
   flex-wrap: wrap;
 
   justify-content: center;
-
   align-items: center;
 
   gap: 1rem;
@@ -701,9 +636,7 @@ p {
   position: absolute;
 
   top: 0;
-
   left: 8%;
-
   right: 8%;
 
   height: 1px;
@@ -721,20 +654,43 @@ p {
   position: absolute;
 
   top: -24px;
-
   left: 50%;
 
   width: 1px;
-
   height: 24px;
 
   background: var(--oak-500);
 }
 
 
-/* =====================================================
+/* ================================
+   DERNIÈRE LIGNE
+   INFORMATIQUE + COMPTABILITÉ
+================================ */
+
+.org-services-final {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 12px;
+}
+
+.org-services-final .org-box {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+
+/* ================================
    CONTACT
-===================================================== */
+================================ */
 
 .contact {
   padding: 80px 0;
@@ -758,7 +714,6 @@ p {
   min-width: 0;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 0.3rem;
@@ -770,7 +725,6 @@ p {
   font-size: 0.75rem;
 
   text-transform: uppercase;
-
   letter-spacing: 0.08em;
 
   color: var(--forest-600);
@@ -780,18 +734,16 @@ p {
   margin: 0;
 
   font-size: 1rem;
-
   font-weight: 500;
 
   overflow-wrap: anywhere;
-
   word-break: break-word;
 }
 
 
-/* =====================================================
+/* ================================
    FOOTER
-===================================================== */
+================================ */
 
 .site-footer {
   padding: 24px 0;
@@ -812,9 +764,9 @@ p {
 }
 
 
-/* =====================================================
+/* =================================================
    TABLETTE
-===================================================== */
+================================================= */
 
 @media (max-width: 900px) {
 
@@ -832,36 +784,33 @@ p {
     gap: 0.6rem;
 
     padding-top: 0;
-
     margin-top: 0;
   }
 
   .org-branch-3::before,
-  .org-branch-3 .org-box::before,
-  .org-services::before,
-  .org-services .org-box::before {
+  .org-branch-3 .org-box::before {
     display: none;
   }
 
   .org-services {
     padding-top: 0;
-
     gap: 0.6rem;
   }
 
-  .org-services .org-box {
-    width: 180px;
+  .org-services::before,
+  .org-services .org-box::before {
+    display: none;
+  }
 
-    min-width: 180px;
-
-    max-width: 180px;
+  .org-services-final {
+    gap: 12px;
   }
 }
 
 
-/* =====================================================
+/* =================================================
    MOBILE 760px
-===================================================== */
+================================================= */
 
 @media (max-width: 760px) {
 
@@ -886,14 +835,12 @@ p {
     position: absolute;
 
     top: 68px;
-
     left: 0;
     right: 0;
 
     display: none;
 
     flex-direction: column;
-
     align-items: stretch;
 
     gap: 0.3rem;
@@ -949,9 +896,9 @@ p {
 }
 
 
-/* =====================================================
+/* =================================================
    TÉLÉPHONE 480px
-===================================================== */
+================================================= */
 
 @media (max-width: 480px) {
 
@@ -963,21 +910,17 @@ p {
   }
 
 
-  /* -------------------------------------------------
-     CONTENEUR
-  ------------------------------------------------- */
+  /* CONTENEUR */
 
   .wrap {
     width: 100%;
 
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
 
-  /* -------------------------------------------------
-     IMAGE / BANNIÈRE
-  ------------------------------------------------- */
+  /* IMAGE */
 
   .official-banner {
     width: 100%;
@@ -987,16 +930,13 @@ p {
     aspect-ratio: auto;
 
     background-size: cover;
-
     background-position: center;
 
     overflow: hidden;
   }
 
 
-  /* -------------------------------------------------
-     DOCUMENTS
-  ------------------------------------------------- */
+  /* DOCUMENTS */
 
   .documents {
     padding: 42px 0;
@@ -1055,14 +995,14 @@ p {
   }
 
 
-  /* -------------------------------------------------
-     ORGANIGRAMME
-  ------------------------------------------------- */
+  /* ================================
+     ORGANIGRAMME MOBILE
+  ================================ */
 
   .organigramme {
     width: 100%;
 
-    padding: 35px 8px;
+    padding: 35px 5px;
 
     overflow: hidden;
   }
@@ -1077,6 +1017,8 @@ p {
   .organigramme h2 {
     margin-bottom: 20px;
 
+    padding: 0 5px;
+
     font-size: 1.25rem;
 
     text-align: center;
@@ -1084,57 +1026,52 @@ p {
 
   .org-chart {
     width: 100%;
-
     max-width: 100%;
 
     overflow: hidden;
   }
 
 
-  /* -------------------------------------------------
-     BOÎTES ORGANIGRAMME
-  ------------------------------------------------- */
+  /* CASES */
 
   .org-box {
-    width: 175px !important;
+    width: 165px !important;
 
-    min-width: 175px !important;
+    min-width: 165px !important;
+    max-width: 165px !important;
 
-    max-width: 175px !important;
+    padding: 7px 6px;
 
-    padding: 7px 8px;
-
-    font-size: 0.68rem;
+    font-size: 0.65rem;
 
     line-height: 1.2;
 
     border-radius: 3px;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .org-box-top {
-    width: 175px !important;
+    width: 165px !important;
 
-    min-width: 175px !important;
-
-    max-width: 175px !important;
+    min-width: 165px !important;
+    max-width: 165px !important;
   }
 
   .org-box-small {
-    width: 160px !important;
+    width: 140px !important;
 
-    min-width: 160px !important;
+    min-width: 140px !important;
+    max-width: 140px !important;
 
-    max-width: 160px !important;
+    padding: 6px 5px;
 
-    padding: 6px 7px;
-
-    font-size: 0.64rem;
+    font-size: 0.60rem;
   }
 
 
-  /* -------------------------------------------------
-     BRANCHE
-  ------------------------------------------------- */
+  /* BRANCHE */
 
   .org-branch-3 {
     width: 100%;
@@ -1144,13 +1081,11 @@ p {
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 5px;
 
     padding: 0;
-
     margin: 0;
   }
 
@@ -1160,59 +1095,77 @@ p {
   }
 
 
-  /* -------------------------------------------------
-     SERVICES
-     
-     INFORMATIQUE + COMPTABILITÉ
-     SUR LA MÊME LIGNE
-  ------------------------------------------------- */
+  /* SERVICES */
 
   .org-services {
     width: 100%;
 
-    max-width: 100%;
+    display: grid;
 
-    display: flex;
+    grid-template-columns: 1fr 1fr;
 
-    flex-direction: row;
+    justify-items: center;
 
-    justify-content: center;
-
-    align-items: center;
-
-    flex-wrap: nowrap;
-
-    gap: 8px;
+    gap: 6px;
 
     padding: 0;
-
-    margin: 0;
   }
 
-  .org-services::before {
+  .org-services::before,
+  .org-services .org-box::before {
     display: none;
   }
 
-  .org-services .org-box {
+
+  /* =========================================
+     DERNIÈRE LIGNE :
+     INFORMATIQUE + COMPTABILITÉ
+  ========================================= */
+
+  .org-services-final {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    flex-wrap: nowrap !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    gap: 8px !important;
+
+    margin-top: 10px !important;
+
+    padding: 0 !important;
+  }
+
+  .org-services-final .org-box {
+    flex: 0 0 145px !important;
+
     width: 145px !important;
 
     min-width: 145px !important;
 
     max-width: 145px !important;
 
-    padding: 7px 5px;
+    padding: 8px 5px !important;
 
-    font-size: 0.65rem;
+    font-size: 0.62rem !important;
+
+    line-height: 1.2 !important;
+
+    text-align: center !important;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
   }
 
-  .org-services .org-box::before {
-    display: none;
-  }
 
-
-  /* -------------------------------------------------
-     CONNECTEURS
-  ------------------------------------------------- */
+  /* CONNECTEURS */
 
   .org-connector {
     width: 1px;
@@ -1223,9 +1176,7 @@ p {
   }
 
 
-  /* -------------------------------------------------
-     CONTACT
-  ------------------------------------------------- */
+  /* CONTACT */
 
   .contact {
     padding: 44px 0;
@@ -1242,9 +1193,7 @@ p {
   }
 
 
-  /* -------------------------------------------------
-     FOOTER
-  ------------------------------------------------- */
+  /* FOOTER */
 
   .site-footer {
     padding: 20px 0;
@@ -1254,59 +1203,71 @@ p {
 }
 
 
-/* =====================================================
+/* =================================================
    TRÈS PETIT TÉLÉPHONE 360px
-===================================================== */
+================================================= */
 
-@media (max-width: 480px) {
-
-  /* Organigramme */
-  .organigramme {
-    width: 100%;
-    overflow: hidden;
-    padding: 35px 5px;
-  }
-
-  .organigramme .wrap {
-    width: 100%;
-    padding: 0 5px;
-  }
-
-  /* Dernière ligne : Informatique + Comptabilité */
-  .org-services-final {
-    width: 100% !important;
-
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-
-    justify-content: center !important;
-    align-items: center !important;
-
-    gap: 8px !important;
-
-    margin-top: 10px !important;
-  }
-
-  .org-services-final .org-box {
-    flex: 0 0 145px !important;
-
-    width: 145px !important;
-    min-width: 145px !important;
-    max-width: 145px !important;
-
-    padding: 8px 5px !important;
-
-    font-size: 0.62rem !important;
-    line-height: 1.2 !important;
-
-    text-align: center !important;
-  }
-}
-
-
-/* Très petits téléphones */
 @media (max-width: 360px) {
+
+  .wrap {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+
+  /* IMAGE */
+
+  .official-banner {
+    height: 150px;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  /* ORGANIGRAMME */
+
+  .organigramme {
+    padding: 30px 3px;
+  }
+
+  .organigramme h2 {
+    font-size: 1.1rem;
+  }
+
+
+  .org-box {
+    width: 150px !important;
+
+    min-width: 150px !important;
+
+    max-width: 150px !important;
+
+    padding: 6px 5px;
+
+    font-size: 0.60rem;
+  }
+
+  .org-box-top {
+    width: 150px !important;
+
+    min-width: 150px !important;
+
+    max-width: 150px !important;
+  }
+
+  .org-box-small {
+    width: 130px !important;
+
+    min-width: 130px !important;
+
+    max-width: 130px !important;
+
+    font-size: 0.56rem;
+  }
+
+
+  /* INFORMATIQUE + COMPTABILITÉ */
 
   .org-services-final {
     gap: 5px !important;
@@ -1316,9 +1277,20 @@ p {
     flex: 0 0 135px !important;
 
     width: 135px !important;
+
     min-width: 135px !important;
+
     max-width: 135px !important;
 
+    padding: 6px 4px !important;
+
     font-size: 0.57rem !important;
+  }
+
+
+  .org-connector {
+    height: 9px;
+
+    min-height: 9px;
   }
 }
