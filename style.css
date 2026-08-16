@@ -1348,3 +1348,59 @@ p {
     min-height: 9px;
   }
 }
+/* =========================================
+   MOBILE : INFORMATIQUE + COMPTABILITÉ
+   SUR LA MÊME LIGNE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .org-services-final {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    flex-wrap: nowrap !important;
+
+    gap: 8px !important;
+
+    margin-top: 10px !important;
+    padding: 0 !important;
+  }
+
+  .org-services-final .org-box {
+    width: 145px !important;
+    min-width: 145px !important;
+    max-width: 145px !important;
+
+    padding: 8px 5px !important;
+
+    font-size: 0.62rem !important;
+    line-height: 1.2 !important;
+
+    text-align: center !important;
+  }
+}
+
+
+/* Très petits téléphones */
+
+@media (max-width: 360px) {
+
+  .org-services-final {
+    gap: 5px !important;
+  }
+
+  .org-services-final .org-box {
+    width: 135px !important;
+    min-width: 135px !important;
+    max-width: 135px !important;
+
+    font-size: 0.57rem !important;
+    padding: 6px 4px !important;
+  }
+}
