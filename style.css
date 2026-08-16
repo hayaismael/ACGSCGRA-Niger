@@ -16,9 +16,9 @@
 }
 
 
-/* =========================================
-   RESET / BASE
-========================================= */
+/* =====================================================
+   RESET
+===================================================== */
 
 *,
 *::before,
@@ -40,13 +40,10 @@ body {
 
 body {
   margin: 0;
-
   font-family: var(--font-body);
   color: var(--ink-900);
   background: var(--paper-100);
-
   line-height: 1.55;
-
   -webkit-font-smoothing: antialiased;
 }
 
@@ -75,13 +72,10 @@ h1,
 h2,
 h3 {
   margin: 0 0 0.5em;
-
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.15;
-
   color: var(--walnut-900);
-
   overflow-wrap: anywhere;
 }
 
@@ -90,9 +84,9 @@ p {
 }
 
 
-/* =========================================
+/* =====================================================
    ACCESSIBILITÉ
-========================================= */
+===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -105,14 +99,13 @@ p {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 
 
-/* =========================================
+/* =====================================================
    CONTENEUR
-========================================= */
+===================================================== */
 
 .wrap {
   width: 100%;
@@ -125,11 +118,9 @@ p {
 }
 
 
-/* =========================================
-   BANNIÈRE
-   Image : 1280 x 640
-   Ratio : 2 / 1
-========================================= */
+/* =====================================================
+   BANNIÈRE / IMAGE
+===================================================== */
 
 .official-banner {
   width: 100%;
@@ -141,12 +132,14 @@ p {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
+  overflow: hidden;
 }
 
 
-/* =========================================
+/* =====================================================
    HEADER
-========================================= */
+===================================================== */
 
 .site-header {
   position: sticky;
@@ -186,9 +179,9 @@ p {
 }
 
 
-/* =========================================
+/* =====================================================
    NAVIGATION
-========================================= */
+===================================================== */
 
 .nav {
   display: flex;
@@ -225,9 +218,9 @@ p {
 }
 
 
-/* =========================================
-   BOUTON MENU MOBILE
-========================================= */
+/* =====================================================
+   MENU MOBILE
+===================================================== */
 
 .nav-toggle {
   display: none;
@@ -260,9 +253,9 @@ p {
 }
 
 
-/* =========================================
+/* =====================================================
    TEXTES
-========================================= */
+===================================================== */
 
 .eyebrow {
   margin: 0 0 1em;
@@ -283,9 +276,9 @@ p {
 }
 
 
-/* =========================================
+/* =====================================================
    BOUTONS
-========================================= */
+===================================================== */
 
 .btn {
   display: inline-flex;
@@ -322,20 +315,18 @@ p {
 
 .btn-primary {
   background: var(--walnut-900);
-
   color: #fff;
 }
 
 .btn-primary:hover {
   background: var(--forest-600);
-
   transform: translateY(-1px);
 }
 
 
-/* =========================================
+/* =====================================================
    DOCUMENTS
-========================================= */
+===================================================== */
 
 .documents {
   padding: 72px 0;
@@ -375,7 +366,6 @@ p {
 
 .doc-card h3 {
   margin: 0;
-
   font-size: 1.2rem;
 }
 
@@ -392,9 +382,9 @@ p {
 }
 
 
-/* =========================================
+/* =====================================================
    DOCUMENT VIEWER
-========================================= */
+===================================================== */
 
 .doc-viewer {
   width: 100%;
@@ -409,9 +399,9 @@ p {
 }
 
 
-/* =========================================
-   TEXTE DOCUMENT
-========================================= */
+/* =====================================================
+   TEXTE DES DOCUMENTS
+===================================================== */
 
 .doc-text {
   width: 100%;
@@ -470,9 +460,9 @@ p {
 }
 
 
-/* =========================================
+/* =====================================================
    GALERIE
-========================================= */
+===================================================== */
 
 .photo-gallery {
   width: 100%;
@@ -496,9 +486,9 @@ p {
 }
 
 
-/* =========================================
-   ORGANIGRAMME - DESKTOP
-========================================= */
+/* =====================================================
+   ORGANIGRAMME
+===================================================== */
 
 .organigramme {
   width: 100%;
@@ -519,7 +509,7 @@ p {
 }
 
 
-/* Organigramme général */
+/* Conteneur principal */
 
 .org-chart {
   width: 100%;
@@ -609,22 +599,20 @@ p {
 }
 
 
-/* Connecteurs */
+/* Connecteur */
 
 .org-connector {
   width: 1px;
 
   height: 24px;
 
-  flex: 0 0 24px;
-
   background: var(--oak-500);
 }
 
 
-/* =========================================
-   BRANCHE 3 COLONNES
-========================================= */
+/* =====================================================
+   BRANCHE 3 SERVICES
+===================================================== */
 
 .org-branch-3 {
   position: relative;
@@ -644,9 +632,6 @@ p {
   margin-top: -24px;
 }
 
-
-/* Ligne horizontale */
-
 .org-branch-3::before {
   content: "";
 
@@ -664,9 +649,6 @@ p {
 
   background: rgba(244, 247, 241, 0.4);
 }
-
-
-/* Connecteurs verticaux */
 
 .org-branch-3 .org-box {
   position: relative;
@@ -689,9 +671,9 @@ p {
 }
 
 
-/* =========================================
-   SERVICES
-========================================= */
+/* =====================================================
+   SERVICES INFORMATIQUE / COMPTABILITÉ
+===================================================== */
 
 .org-services {
   position: relative;
@@ -706,13 +688,12 @@ p {
 
   justify-content: center;
 
+  align-items: center;
+
   gap: 1rem;
 
   padding-top: 24px;
 }
-
-
-/* Ligne des services */
 
 .org-services::before {
   content: "";
@@ -729,9 +710,6 @@ p {
 
   background: var(--oak-500);
 }
-
-
-/* Connecteurs services */
 
 .org-services .org-box {
   position: relative;
@@ -754,9 +732,9 @@ p {
 }
 
 
-/* =========================================
+/* =====================================================
    CONTACT
-========================================= */
+===================================================== */
 
 .contact {
   padding: 80px 0;
@@ -811,9 +789,9 @@ p {
 }
 
 
-/* =========================================
+/* =====================================================
    FOOTER
-========================================= */
+===================================================== */
 
 .site-footer {
   padding: 24px 0;
@@ -834,20 +812,15 @@ p {
 }
 
 
-/* =========================================
-   TABLETTE - 900px
-========================================= */
+/* =====================================================
+   TABLETTE
+===================================================== */
 
 @media (max-width: 900px) {
-
-  /* Documents */
 
   .doc-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-
-  /* Organigramme */
 
   .organigramme {
     padding: 55px 0;
@@ -871,13 +844,9 @@ p {
   }
 
   .org-services {
-    flex-direction: column;
-
-    align-items: center;
+    padding-top: 0;
 
     gap: 0.6rem;
-
-    padding-top: 0;
   }
 
   .org-services .org-box {
@@ -890,22 +859,16 @@ p {
 }
 
 
-/* =========================================
-   MOBILE - 760px
-========================================= */
+/* =====================================================
+   MOBILE 760px
+===================================================== */
 
 @media (max-width: 760px) {
 
-  /* Conteneur */
-
   .wrap {
     padding-left: 20px;
-
     padding-right: 20px;
   }
-
-
-  /* Header */
 
   .header-inner {
     min-height: 68px;
@@ -915,15 +878,9 @@ p {
     font-size: 1.1rem;
   }
 
-
-  /* Bouton menu */
-
   .nav-toggle {
     display: flex;
   }
-
-
-  /* Navigation mobile */
 
   .nav {
     position: absolute;
@@ -931,7 +888,6 @@ p {
     top: 68px;
 
     left: 0;
-
     right: 0;
 
     display: none;
@@ -971,9 +927,6 @@ p {
     text-align: center;
   }
 
-
-  /* Sections */
-
   .documents {
     padding: 52px 0;
   }
@@ -986,15 +939,9 @@ p {
     padding: 52px 0;
   }
 
-
-  /* Documents */
-
   .doc-cards {
     grid-template-columns: 1fr;
   }
-
-
-  /* Contact */
 
   .contact-meta {
     grid-template-columns: 1fr;
@@ -1002,40 +949,54 @@ p {
 }
 
 
-/* =========================================
-   MOBILE - 480px
-========================================= */
+/* =====================================================
+   TÉLÉPHONE 480px
+===================================================== */
 
 @media (max-width: 480px) {
 
-  /* Conteneur */
-
-  .wrap {
-    padding-left: 16px;
-
-    padding-right: 16px;
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
 
-  /* =======================================
-     BANNIÈRE
-     On garde le ratio 2/1
-  ======================================= */
+  /* -------------------------------------------------
+     CONTENEUR
+  ------------------------------------------------- */
+
+  .wrap {
+    width: 100%;
+
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+
+  /* -------------------------------------------------
+     IMAGE / BANNIÈRE
+  ------------------------------------------------- */
 
   .official-banner {
     width: 100%;
 
-    aspect-ratio: 2 / 1;
+    height: 180px;
+
+    aspect-ratio: auto;
 
     background-size: cover;
 
-    background-position: center center;
+    background-position: center;
+
+    overflow: hidden;
   }
 
 
-  /* =======================================
+  /* -------------------------------------------------
      DOCUMENTS
-  ======================================= */
+  ------------------------------------------------- */
 
   .documents {
     padding: 42px 0;
@@ -1047,8 +1008,18 @@ p {
     font-size: 1.5rem;
   }
 
+  .doc-cards {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
   .doc-card {
-    padding: 1rem;
+    width: 100%;
+
+    padding: 14px;
 
     gap: 0.7rem;
   }
@@ -1061,9 +1032,6 @@ p {
     font-size: 0.84rem;
   }
 
-
-  /* Boutons */
-
   .doc-card .btn {
     width: 100%;
 
@@ -1074,8 +1042,9 @@ p {
     font-size: 0.86rem;
   }
 
-
-  /* Texte document */
+  .doc-viewer {
+    height: 300px;
+  }
 
   .doc-text {
     max-height: 320px;
@@ -1085,117 +1054,186 @@ p {
     font-size: 0.82rem;
   }
 
-  .doc-text h4 {
-    font-size: 0.92rem;
-  }
 
-
-  /* Viewer */
-
-  .doc-viewer {
-    height: 300px;
-  }
-
-
-  /* =======================================
-     ORGANIGRAMME MOBILE
-  ======================================= */
+  /* -------------------------------------------------
+     ORGANIGRAMME
+  ------------------------------------------------- */
 
   .organigramme {
-    padding: 38px 0;
+    width: 100%;
+
+    padding: 35px 8px;
+
+    overflow: hidden;
+  }
+
+  .organigramme .wrap {
+    width: 100%;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .organigramme h2 {
-    margin-bottom: 1.4rem;
+    margin-bottom: 20px;
 
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 
     text-align: center;
   }
 
+  .org-chart {
+    width: 100%;
 
-  /* Toutes les boîtes sont petites */
+    max-width: 100%;
+
+    overflow: hidden;
+  }
+
+
+  /* -------------------------------------------------
+     BOÎTES ORGANIGRAMME
+  ------------------------------------------------- */
 
   .org-box {
-    width: 230px;
+    width: 175px !important;
 
-    min-width: 230px;
+    min-width: 175px !important;
 
-    max-width: 230px;
+    max-width: 175px !important;
 
-    padding: 0.6rem 0.7rem;
+    padding: 7px 8px;
 
-    font-size: 0.76rem;
+    font-size: 0.68rem;
 
-    line-height: 1.25;
+    line-height: 1.2;
+
+    border-radius: 3px;
   }
 
+  .org-box-top {
+    width: 175px !important;
 
-  /* Petites boîtes */
+    min-width: 175px !important;
+
+    max-width: 175px !important;
+  }
 
   .org-box-small {
-    width: 210px;
+    width: 160px !important;
 
-    min-width: 210px;
+    min-width: 160px !important;
 
-    max-width: 210px;
+    max-width: 160px !important;
 
-    font-size: 0.71rem;
+    padding: 6px 7px;
+
+    font-size: 0.64rem;
   }
 
 
-  /* Connecteurs très courts */
-
-  .org-connector {
-    height: 15px;
-
-    flex-basis: 15px;
-  }
-
-
-  /* Branche verticale */
+  /* -------------------------------------------------
+     BRANCHE
+  ------------------------------------------------- */
 
   .org-branch-3 {
     width: 100%;
 
-    gap: 0.5rem;
+    display: flex;
 
     flex-direction: column;
 
     align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 0;
+
+    margin: 0;
+  }
+
+  .org-branch-3::before,
+  .org-branch-3 .org-box::before {
+    display: none;
   }
 
 
-  /* Services */
+  /* -------------------------------------------------
+     SERVICES
+     
+     INFORMATIQUE + COMPTABILITÉ
+     SUR LA MÊME LIGNE
+  ------------------------------------------------- */
 
   .org-services {
     width: 100%;
 
-    gap: 0.5rem;
+    max-width: 100%;
 
-    flex-direction: column;
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
 
     align-items: center;
+
+    flex-wrap: nowrap;
+
+    gap: 8px;
+
+    padding: 0;
+
+    margin: 0;
+  }
+
+  .org-services::before {
+    display: none;
   }
 
   .org-services .org-box {
-    width: 210px;
+    width: 145px !important;
 
-    min-width: 210px;
+    min-width: 145px !important;
 
-    max-width: 210px;
+    max-width: 145px !important;
+
+    padding: 7px 5px;
+
+    font-size: 0.65rem;
+  }
+
+  .org-services .org-box::before {
+    display: none;
   }
 
 
-  /* =======================================
+  /* -------------------------------------------------
+     CONNECTEURS
+  ------------------------------------------------- */
+
+  .org-connector {
+    width: 1px;
+
+    height: 10px;
+
+    min-height: 10px;
+  }
+
+
+  /* -------------------------------------------------
      CONTACT
-  ======================================= */
+  ------------------------------------------------- */
 
   .contact {
     padding: 44px 0;
   }
 
   .contact-meta {
+    grid-template-columns: 1fr;
+
     gap: 1rem;
   }
 
@@ -1204,9 +1242,9 @@ p {
   }
 
 
-  /* =======================================
+  /* -------------------------------------------------
      FOOTER
-  ======================================= */
+  ------------------------------------------------- */
 
   .site-footer {
     padding: 20px 0;
@@ -1216,233 +1254,97 @@ p {
 }
 
 
-/* =========================================
-   TRÈS PETIT TÉLÉPHONE - 360px
-========================================= */
+/* =====================================================
+   TRÈS PETIT TÉLÉPHONE 360px
+===================================================== */
 
 @media (max-width: 360px) {
 
   .wrap {
-    padding-left: 12px;
-
-    padding-right: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-
-  /* Logo */
-
-  .logo {
-    font-size: 1rem;
-  }
-
-
-  /* Bannière */
-
-  .official-banner {
-    aspect-ratio: 2 / 1;
-
-    background-size: cover;
-
-    background-position: center center;
-  }
-
-
-  /* Documents */
-
-  .doc-card {
-    padding: 0.85rem;
-  }
-
-
-  /* Organigramme */
-
-  .organigramme {
-    padding: 32px 0;
-  }
-
-  .organigramme h2 {
-    font-size: 1.25rem;
-
-    padding: 0 10px;
-  }
-
-  .org-box {
-    width: 205px;
-
-    min-width: 205px;
-
-    max-width: 205px;
-
-    padding: 0.55rem;
-
-    font-size: 0.72rem;
-  }
-
-  .org-box-small {
-    width: 190px;
-
-    min-width: 190px;
-
-    max-width: 190px;
-
-    font-size: 0.68rem;
-  }
-
-  .org-services .org-box {
-    width: 195px;
-
-    min-width: 195px;
-
-    max-width: 195px;
-  }
-
-  .org-connector {
-    height: 13px;
-
-    flex-basis: 13px;
-  }
-}
-/* =====================================================
-   CORRECTION MOBILE - IMAGE + ORGANIGRAMME
-   ===================================================== */
-
-/* =========================================
-   VERSION TÉLÉPHONE
-========================================= */
-
-@media (max-width: 600px) {
-
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-
-  .wrap {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 14px;
-    padding-right: 14px;
-  }
 
   /* IMAGE */
+
   .official-banner {
-    width: 100%;
-    height: 180px;
-    aspect-ratio: auto;
+    height: 150px;
 
     background-size: cover;
+
     background-position: center;
   }
 
-  /* ORGANIGRAMME */
-  .organigramme {
-    width: 100%;
-    padding: 35px 8px;
-    overflow: hidden;
-  }
 
-  .organigramme .wrap {
-    padding-left: 0;
-    padding-right: 0;
+  /* ORGANIGRAMME */
+
+  .organigramme {
+    padding: 30px 5px;
   }
 
   .organigramme h2 {
-    font-size: 1.25rem;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+
+    padding: 0 5px;
   }
 
-  .org-chart {
-    width: 100%;
-    max-width: 100%;
-  }
 
   .org-box {
-    width: 180px !important;
-    min-width: 180px !important;
-    max-width: 180px !important;
+    width: 155px !important;
 
-    padding: 8px;
+    min-width: 155px !important;
 
-    font-size: 0.7rem;
-    line-height: 1.2;
+    max-width: 155px !important;
+
+    padding: 6px;
+
+    font-size: 0.62rem;
+  }
+
+  .org-box-top {
+    width: 155px !important;
+
+    min-width: 155px !important;
+
+    max-width: 155px !important;
   }
 
   .org-box-small {
-    width: 160px !important;
-    min-width: 160px !important;
-    max-width: 160px !important;
+    width: 145px !important;
 
-    font-size: 0.65rem;
+    min-width: 145px !important;
+
+    max-width: 145px !important;
+
+    font-size: 0.58rem;
   }
 
-  .org-branch-3 {
-    width: 100%;
 
-    flex-direction: column;
-
-    gap: 6px;
-
-    padding: 0;
-    margin: 0;
-  }
-
-  .org-branch-3::before,
-  .org-branch-3 .org-box::before {
-    display: none;
-  }
+  /* INFORMATIQUE + COMPTABILITÉ */
 
   .org-services {
-    width: 100%;
+    gap: 5px;
 
-    flex-direction: column;
-    align-items: center;
-
-    gap: 6px;
-
-    padding: 0;
-  }
-
-  .org-services::before,
-  .org-services .org-box::before {
-    display: none;
+    flex-wrap: nowrap;
   }
 
   .org-services .org-box {
-    width: 165px !important;
-    min-width: 165px !important;
-    max-width: 165px !important;
+    width: 135px !important;
+
+    min-width: 135px !important;
+
+    max-width: 135px !important;
+
+    padding: 6px 4px;
+
+    font-size: 0.58rem;
   }
+
 
   .org-connector {
-    height: 12px;
-  }
+    height: 9px;
 
-  /* DOCUMENTS */
-  .documents {
-    padding: 40px 0;
-  }
-
-  .doc-cards {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .doc-card {
-    width: 100%;
-    padding: 14px;
-  }
-
-  /* CONTACT */
-  .contact {
-    padding: 40px 0;
-  }
-
-  .contact-meta {
-    grid-template-columns: 1fr;
+    min-height: 9px;
   }
 }
