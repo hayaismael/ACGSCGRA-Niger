@@ -1258,121 +1258,39 @@ p {
    TRÈS PETIT TÉLÉPHONE 360px
 ===================================================== */
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 
-  .wrap {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-
-  /* IMAGE */
-
-  .official-banner {
-    height: 150px;
-
-    background-size: cover;
-
-    background-position: center;
-  }
-
-
-  /* ORGANIGRAMME */
-
+  /* Organigramme */
   .organigramme {
-    padding: 30px 5px;
+    width: 100%;
+    overflow: hidden;
+    padding: 35px 5px;
   }
 
-  .organigramme h2 {
-    font-size: 1.1rem;
-
+  .organigramme .wrap {
+    width: 100%;
     padding: 0 5px;
   }
 
-
-  .org-box {
-    width: 155px !important;
-
-    min-width: 155px !important;
-
-    max-width: 155px !important;
-
-    padding: 6px;
-
-    font-size: 0.62rem;
-  }
-
-  .org-box-top {
-    width: 155px !important;
-
-    min-width: 155px !important;
-
-    max-width: 155px !important;
-  }
-
-  .org-box-small {
-    width: 145px !important;
-
-    min-width: 145px !important;
-
-    max-width: 145px !important;
-
-    font-size: 0.58rem;
-  }
-
-
-  /* INFORMATIQUE + COMPTABILITÉ */
-
-  .org-services {
-    gap: 5px;
-
-    flex-wrap: nowrap;
-  }
-
-  .org-services .org-box {
-    width: 135px !important;
-
-    min-width: 135px !important;
-
-    max-width: 135px !important;
-
-    padding: 6px 4px;
-
-    font-size: 0.58rem;
-  }
-
-
-  .org-connector {
-    height: 9px;
-
-    min-height: 9px;
-  }
-}
-/* =========================================
-   MOBILE : INFORMATIQUE + COMPTABILITÉ
-   SUR LA MÊME LIGNE
-========================================= */
-
-@media (max-width: 480px) {
-
+  /* Dernière ligne : Informatique + Comptabilité */
   .org-services-final {
     width: 100% !important;
 
     display: flex !important;
     flex-direction: row !important;
+    flex-wrap: nowrap !important;
 
     justify-content: center !important;
     align-items: center !important;
 
-    flex-wrap: nowrap !important;
-
     gap: 8px !important;
 
     margin-top: 10px !important;
-    padding: 0 !important;
   }
 
   .org-services-final .org-box {
+    flex: 0 0 145px !important;
+
     width: 145px !important;
     min-width: 145px !important;
     max-width: 145px !important;
@@ -1388,7 +1306,6 @@ p {
 
 
 /* Très petits téléphones */
-
 @media (max-width: 360px) {
 
   .org-services-final {
@@ -1396,11 +1313,12 @@ p {
   }
 
   .org-services-final .org-box {
+    flex: 0 0 135px !important;
+
     width: 135px !important;
     min-width: 135px !important;
     max-width: 135px !important;
 
     font-size: 0.57rem !important;
-    padding: 6px 4px !important;
   }
 }
